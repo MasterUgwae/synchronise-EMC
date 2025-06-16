@@ -4,10 +4,14 @@ import numpy as np
 from scipy.stats import cauchy
 
 # Number of oscillators
-N = 10
+N = 100
 
 # Coupling strength
+<<<<<<< HEAD
 K = 7.0
+=======
+K = 10.0
+>>>>>>> d02ad67c7b9cd6f4071d667646e175fde812e6d7
 
 # Baseline natural frequency (the center of the distribution)
 x0 = 0.5

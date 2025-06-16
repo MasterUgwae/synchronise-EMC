@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 __pycache__/
 **/*.py[cod]
+=======
+venv*
+>>>>>>> d02ad67c7b9cd6f4071d667646e175fde812e6d7
