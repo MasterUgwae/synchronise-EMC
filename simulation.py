@@ -72,7 +72,13 @@ if __name__ == '__main__':
     
     # Compute final order parameter.
     r_final = compute_order_parameter(theta_sol[-1])
-    print(f"Final synchronisation order parameter: r = {r_final:.3f}")
+    print(f"Final synchronisation order parameter: r = {r_final:.8f}")
+    if r_final > 0.9:
+
+        print("The oscillators are highly synchronised.")
+    
+        for i in range(config.N):
+            print(f'The phase of oscillator {i+1} is {theta_sol[i]}')
     
     # Plot phase evolution for each oscillator.
     for i in range(config.N):

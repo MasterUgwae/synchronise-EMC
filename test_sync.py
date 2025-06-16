@@ -23,4 +23,4 @@ def test_synchronisation(n_trials=10, threshold=0.9):
     print(f"\nSummary: {success_count} out of {n_trials} trials reached synchronisation (r ≥ {threshold}).")
 
 if __name__ == '__main__':
-    test_synchronisation(n_trials=10, threshold=0.9)
+    test_synchronisation(n_trials=100, threshold=0.9)
