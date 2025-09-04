@@ -1,26 +1,50 @@
-# test_sync.py
-
+import argparse
 import config
-from simulation import simulate_kuramoto, compute_order_parameter
+from simulation import simulate
+import numpy as np
 
-def test_synchronisation(n_trials=10, threshold=0.9):
+def test_synchronisation(n_trials=10,
+                         threshold=0.9,
+                         vary="omega",
+                         backend="solve_ivp"):
     """
-    Runs the simulation repeatedly and checks if the final synchronisation order
-    parameter r exceeds the specified threshold.
-    
-    Parameters:
-      n_trials: Number of simulation runs.
-      threshold: Synchronisation threshold (r value).
+    Same initial condition every trial except for one quantity:
+      vary="omega"   → redraw natural frequencies each run
+      vary=None      → reuse the exact same ω and graph
     """
-    success_count = 0
+    ok = 0
+    # static graph adjacency
+    A = config.get_adjacency(vary=False)
+
     for i in range(n_trials):
-        omega = config.cauchy.rvs(loc=config.x0, scale=1, size=config.N)
-        t, theta_sol = simulate_kuramoto(config.theta0, omega, config.K, config.t_eval)
-        final_r = compute_order_parameter(theta_sol[-1])
-        print(f"Trial {i + 1}: Final order parameter, r = {final_r:.3f}")
-        if final_r >= threshold:
-            success_count += 1
-    print(f"\nSummary: {success_count} out of {n_trials} trials reached synchronisation (r ≥ {threshold}).")
+        if vary == "omega":
+            ω = config.draw_omega()
+        else:
+            ω = config.omega
+        if vary == "num":
+            if n_trials!=0:
+                A = config.get_adjacency(Nloc=i)
+                res = simulate(config.theta0[:i], ω, config.K,
+                               A, config.t_eval, backend=backend)
+                print(f"trial {i+1:02d}: r_final = {res.r_final:.3f}")
+                ok += (res.r_final >= threshold)
+        else:
+            res = simulate(config.theta0, ω, config.K,
+                       A, config.t_eval, backend=backend)
+            print(f"trial {i+1:02d}: r_final = {res.r_final:.3f}")
+            ok += (res.r_final >= threshold)
 
-if __name__ == '__main__':
-    test_synchronisation(n_trials=100, threshold=0.9)
+    print(f"\n{ok}/{n_trials} trials reached r ≥ {threshold}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-n","--n_trials", type=int, default=10)
+    parser.add_argument("-t","--threshold", type=float, default=0.9)
+    parser.add_argument("-v","--vary", choices=["omega","num","none"], default="none",
+                        help="what to reshuffle each trial")
+    parser.add_argument("-b","--backend", choices=["euler","solve_ivp"],
+                        default="solve_ivp")
+    args = parser.parse_args()
+
+    vary = None if args.vary == "none" else args.vary
+    test_synchronisation(args.n_trials, args.threshold, vary, args.backend)
