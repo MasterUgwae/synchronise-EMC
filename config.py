@@ -4,9 +4,9 @@ from scipy.stats import cauchy
 import network
 
 # ---------- physical parameters ----------
-N          = 14          # number of oscillators
-K          = 0.2         # default coupling
-x0         = 5          # centre of the Cauchy distribution (mean frequency)
+N          = 10          # number of oscillators
+K          = 6         # default coupling
+x0         = 50          # centre of the Cauchy distribution (mean frequency)
 scale      = 1.0         # Cauchy scale parameter gamma
 
 # ---------- reproducibility ----------
@@ -15,18 +15,19 @@ rng        = np.random.default_rng(seed)   # NumPy 1.17+ generator
 
 # deterministic "random" frequencies and phases
 omega      = cauchy.rvs(loc=x0, scale=scale, size=N, random_state=rng)
-omega      = np.ndarray([1]*N)
+omega      = np.array([50]*N)
 theta0     = np.linspace(0, 2*np.pi, N, endpoint=False)  # evenly spaced
 theta0[1] += 0.1  # perturb the second oscillator
 # ---------- integration settings ----------
 t0         = 0.0
-t_final    = 100.0
-dt         = 0.01
+t_final    = 10.0
+dt         = 0.001
 t_eval     = np.arange(t0, t_final + dt, dt)             # uniform grid
+t_delay    = 0.01
 
 # ---------- network choice ----------------
 # choices: "full", "ring", "star", "random_er"
-network_type   = "star"
+network_type   = "full"
 network_params = {"p": 0.3}   # only used if network_type=="random_er"
 
 def get_adjacency(vary=False,Nloc = N):

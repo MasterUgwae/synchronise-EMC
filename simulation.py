@@ -1,6 +1,7 @@
 import numpy as np
 from dataclasses import dataclass
 from typing import Literal
+from config import t_eval
 
 @dataclass
 class SimResult:
@@ -13,43 +14,85 @@ def _kuramoto_rhs(theta: np.ndarray,
                   omega: np.ndarray,
                   K: float,
                   A: np.ndarray) -> np.ndarray:
-    """
-    Compute dθ/dt for each oscillator on graph A:
-      dθ_i/dt = ω_i + (K / degree_i) * Σ_j A[i,j] * sin(θ_j − θ_i)
-    """
-    # pairwise differences θ_j − θ_i
-    diff = theta[None, :] - theta[:, None]    # shape (N, N)
+    diff = theta[None, :] - theta[:, None]       # shape (N,N)
     sin_diff = np.sin(diff)
-
-    # weighted sum of interactions
     interaction = np.sum(A * sin_diff, axis=1)
-
-    # degree of each node (number of neighbors)
     degree = A.sum(axis=1)
-    # avoid division by zero if an isolated node appears
     with np.errstate(divide='ignore', invalid='ignore'):
-        coupling = np.where(degree > 0, K * interaction / degree, 0.0)
-
+        coupling = np.where(degree>0, K * interaction / degree, 0.0)
+    print(coupling.shape)
     return omega + coupling
 
+def _kuramoto_rhs_delay(theta_now: np.ndarray,
+                        theta_delay: np.ndarray,
+                        omega: np.ndarray,
+                        K: float,
+                        A: np.ndarray) -> np.ndarray:
+    """
+    Delay-coupled Kuramoto RHS:
+      dθ_i/dt = ω_i + (K/deg_i) * sum_j A_ij * sin(θ_j(t-τ) - θ_i(t))
+    Uses the network-normalized coupling already present in your non-delay version.
+    """
+    # shape (N,N)
+    diff = theta_delay[None, :] - theta_now[:, None]   # θ_j(t-τ) - θ_i(t)
+    sin_diff = np.sin(diff)
+    interaction = np.sum(A * sin_diff, axis=1)
+    degree = A.sum(axis=1)
+    with np.errstate(divide='ignore', invalid='ignore'):
+        coupling = np.where(degree > 0, K * interaction / degree, 0.0)
+    return omega + coupling
+
+
+def _euler_delay(theta0: np.ndarray,
+                 omega: np.ndarray,
+                 K: float,
+                 A: np.ndarray,
+                 t_eval: np.ndarray,
+                 t_delay: float,
+                 prehistory: Literal["hold_initial", "no_delay"]="hold_initial") -> np.ndarray:
+    """
+    Euler solver for delay Kuramoto with grid-aligned delay.
+    - t_delay is assumed small relative to the total simulation time.
+    - prehistory:
+        "hold_initial": use θ(0) for θ(t-τ) until k >= L
+        "no_delay":     use current θ(t) (i.e., zero delay) until k >= L
+    """
+    dt = t_eval[1] - t_eval[0]
+    T, N = t_eval.size, theta0.size
+    theta = np.zeros((T, N))
+    theta[0] = theta0.copy()
+    L = int(round(t_delay / dt))
+
+    for k in range(1, T):
+        if L <= 0:
+            theta_delay = theta[k-1]  # reduces to standard model when τ≈0
+        else:
+            if k - L >= 0:
+                theta_delay = theta[k - L]
+            else:
+                if prehistory == "hold_initial":
+                    theta_delay = theta0
+                elif prehistory == "no_delay":
+                    theta_delay = theta[k-1]
+                else:
+                    raise ValueError("prehistory must be 'hold_initial' or 'no_delay'")
+
+        dθ = _kuramoto_rhs_delay(theta[k-1], theta_delay, omega, K, A)
+        theta[k] = (theta[k-1] + dt * dθ) % (2*np.pi)
+
+    return theta
 def _euler(theta0: np.ndarray,
            omega: np.ndarray,
            K: float,
            A: np.ndarray,
            t_eval: np.ndarray) -> np.ndarray:
-    """
-    Explicit Euler integration on uniform time grid t_eval.
-    Returns theta of shape (T, N).
-    """
     dt = t_eval[1] - t_eval[0]
     T, N = t_eval.size, theta0.size
-    theta = np.zeros((T, N), dtype=float)
+    theta = np.zeros((T, N))
     theta[0] = theta0.copy()
-
     for k in range(1, T):
         dθ = _kuramoto_rhs(theta[k-1], omega, K, A)
-        theta[k] = (theta[k-1] + dt * dθ) % (2 * np.pi)
-
+        theta[k] = (theta[k-1] + dt * dθ) % (2*np.pi)
     return theta
 
 def _solve_ivp(theta0: np.ndarray,
@@ -58,70 +101,46 @@ def _solve_ivp(theta0: np.ndarray,
                A: np.ndarray,
                t_eval: np.ndarray,
                method: str = "RK45") -> np.ndarray:
-    """
-    SciPy solve_ivp (adaptive Runge–Kutta) on [t0, t_final].
-    Returns theta of shape (T, N).
-    """
     from scipy.integrate import solve_ivp
 
     def rhs(t, y):
-        # y has shape (N,)
         return _kuramoto_rhs(y, omega, K, A)
 
     sol = solve_ivp(
         rhs,
-        t_span=(t_eval[0], t_eval[-1]),
-        y0=theta0,
+        (t_eval[0], t_eval[-1]),
+        theta0,
         t_eval=t_eval,
-        method=method,
+        method=method
     )
-    # sol.y has shape (N, T) → transpose to (T, N), wrap into [0, 2π)
-    return sol.y.T % (2 * np.pi)
+    return sol.y.T % (2*np.pi)
 
 def simulate(theta0: np.ndarray,
              omega: np.ndarray,
              K: float,
              A: np.ndarray,
              t_eval: np.ndarray,
-             backend: Literal["euler", "solve_ivp"] = "euler",
+             backend: Literal["euler","solve_ivp","euler_delay"]="euler",
+             t_delay: float = 0.0,
+             prehistory: Literal["hold_initial","no_delay"]="hold_initial",
              **ivp_kwargs) -> SimResult:
-    """
-    Run one Kuramoto-model simulation on adjacency A.
-    
-    Parameters
-    ----------
-    theta0 : (N,) initial phases
-    omega  : (N,) natural frequencies
-    K      : coupling strength
-    A      : (N, N) adjacency matrix
-    t_eval : (T,) array of time points
-    backend: "euler" or "solve_ivp"
-    ivp_kwargs
-           : extra args passed to solve_ivp (e.g. method="DOP853")
-    
-    Returns
-    -------
-    SimResult with theta(t), r(t), and r_final.
-    """
     if backend == "euler":
         theta = _euler(theta0, omega, K, A, t_eval)
     elif backend == "solve_ivp":
         theta = _solve_ivp(theta0, omega, K, A, t_eval, **ivp_kwargs)
+    elif backend == "euler_delay":
+        theta = _euler_delay(theta0, omega, K, A, t_eval, t_delay, prehistory)
     else:
-        raise ValueError("backend must be 'euler' or 'solve_ivp'")
+        raise ValueError("backend must be 'euler', 'solve_ivp', or 'euler_delay'")
 
-    # compute Kuramoto order parameter at each time
-    r = np.abs(np.mean(np.exp(1j * theta), axis=1))
+    r = np.abs(np.mean(np.exp(1j*theta), axis=1))
     return SimResult(t=t_eval, theta=theta, r=r, r_final=r[-1])
-
 def demo():
-    """
-    Quick demo: run one simulation using settings in config.py
-    and plot both θ_i(t) and r(t).
-    """
     import config
     import matplotlib.pyplot as plt
+    import matplotlib.animation as animation
 
+    
     A = config.get_adjacency(vary=False)
     res = simulate(
         config.theta0,
@@ -129,24 +148,65 @@ def demo():
         config.K,
         A,
         config.t_eval,
-        backend="solve_ivp"
+        backend="euler_delay",
+        t_delay=config.t_delay,
+        prehistory="hold_initial"  # or "no_delay"
     )
+    
+    N = config.N
+    angles = np.linspace(0, 2*np.pi, N, endpoint=False)
+    pos = {i: (np.cos(angles[i]), np.sin(angles[i])) for i in range(N)}
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(8, 6))
+    
+    deg = A.sum(axis=1)
+    weights = {}
+    for i in range(N):
+        for j in range(i+1, N):
+            if A[i,j]:
+                w = config.K * 0.5 * (1/deg[i] + 1/deg[j])
+                weights[(i,j)] = w
 
-    for i in range(config.N):
-        ax1.plot(res.t, res.theta[:, i], lw=0.8)
-    ax1.set_ylabel("θ (rad)")
-    ax1.set_title("Phase Evolution")
+    max_w = max(weights.values()) if weights else 1.0
+    scale = 5.0 / max_w
 
-    ax2.plot(res.t, res.r, color="k")
-    ax2.axhline(0.9, color="r", ls="--", label="r = 0.9")
-    ax2.set_xlabel("Time")
-    ax2.set_ylabel("Order parameter r")
-    ax2.set_title(f"Synchronisation (r_final = {res.r_final:.3f})")
-    ax2.legend()
+    
+    fig, ax = plt.subplots(figsize=(6,6))
+    ax.set_aspect('equal')
+    ax.axis('off')
+    title = ax.text(-1.0,1.0,"t = 0.0s")
 
-    plt.tight_layout()
+    for (i,j), w in weights.items():
+        x0,y0 = pos[i]
+        x1,y1 = pos[j]
+        ax.plot([x0,x1], [y0,y1],
+                lw=w*scale, color='gray', zorder=1)
+        mx, my = 0.5*(x0+x1), 0.5*(y0+y1)
+        ax.text(mx, my, f"{w:.2f}", fontsize=8,
+                ha='center', va='center', zorder=2)
+
+    
+    xs = [pos[i][0] for i in range(N)]
+    ys = [pos[i][1] for i in range(N)]
+    scat = ax.scatter(xs, ys,
+                      c=res.theta[0],
+                      cmap='hsv',
+                      vmin=0, vmax=2*np.pi,
+                      s=200,
+                      edgecolors='k',
+                      zorder=3)
+
+    
+    frames = np.arange(0, len(res.t), max(1, len(res.t)//100))
+    framerate = 50
+    def update(frame):
+        scat.set_array(res.theta[frame])
+        title.set_text(f"t = {(frame/(framerate)):.2f}s")
+        print(frame/framerate)
+        return scat,title,
+    
+    ani = animation.FuncAnimation(
+        fig, update, frames=frames, interval=framerate, blit=True
+    )
     plt.show()
 
 if __name__ == "__main__":
