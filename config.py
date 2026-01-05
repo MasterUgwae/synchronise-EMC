@@ -2,6 +2,7 @@
 import numpy as np
 from scipy.stats import cauchy
 import network
+from time import time_ns
 
 # ---------- physical parameters ----------
 N          = 10          # number of oscillators
@@ -10,20 +11,20 @@ x0         = 50          # centre of the Cauchy distribution (mean frequency)
 scale      = 1.0         # Cauchy scale parameter gamma
 
 # ---------- reproducibility ----------
-seed       = 43
-rng        = np.random.default_rng(seed)   # NumPy 1.17+ generator
+# seed       = 43
+rng        = np.random.default_rng(time_ns())
 
 # deterministic "random" frequencies and phases
 omega      = cauchy.rvs(loc=x0, scale=scale, size=N, random_state=rng)
 omega      = np.array([50]*N)
-theta0     = np.linspace(0, 2*np.pi, N, endpoint=False)  # evenly spaced
-theta0[1] += 0.1  # perturb the second oscillator
+theta0     = np.linspace(0, 2*np.pi, N, endpoint=False)  
+theta0[1] += 0.1  
 # ---------- integration settings ----------
 t0         = 0.0
 t_final    = 10.0
 dt         = 0.001
-t_eval     = np.arange(t0, t_final + dt, dt)             # uniform grid
-t_delay    = 0.01
+t_eval     = np.arange(t0, t_final + dt, dt)
+t_delay    = 0
 
 # ---------- network choice ----------------
 # choices: "full", "ring", "star", "random_er"

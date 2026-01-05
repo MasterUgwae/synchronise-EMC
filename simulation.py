@@ -20,7 +20,6 @@ def _kuramoto_rhs(theta: np.ndarray,
     degree = A.sum(axis=1)
     with np.errstate(divide='ignore', invalid='ignore'):
         coupling = np.where(degree>0, K * interaction / degree, 0.0)
-    print(coupling.shape)
     return omega + coupling
 
 def _kuramoto_rhs_delay(theta_now: np.ndarray,
@@ -50,13 +49,6 @@ def _euler_delay(theta0: np.ndarray,
                  t_eval: np.ndarray,
                  t_delay: float,
                  prehistory: Literal["hold_initial", "no_delay"]="hold_initial") -> np.ndarray:
-    """
-    Euler solver for delay Kuramoto with grid-aligned delay.
-    - t_delay is assumed small relative to the total simulation time.
-    - prehistory:
-        "hold_initial": use θ(0) for θ(t-τ) until k >= L
-        "no_delay":     use current θ(t) (i.e., zero delay) until k >= L
-    """
     dt = t_eval[1] - t_eval[0]
     T, N = t_eval.size, theta0.size
     theta = np.zeros((T, N))
