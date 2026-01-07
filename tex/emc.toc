@@ -1,5 +1,56 @@
-\contentsline {chapter}{Abstract}{1}{Doc-Start}%
-\contentsline {chapter}{Acknowledgements}{1}{Doc-Start}%
-\contentsline {section}{\numberline {1}Problem Statement}{2}{section.1}%
-\contentsline {section}{\numberline {2}Scope}{2}{section.2}%
-\contentsline {section}{\numberline {3}Objectives}{2}{section.3}%
+\contentsline {chapter}{Acknowledgements}{1}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Problem Statement}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Scope}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectives}{5}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Background and Review of Literature}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Related Work}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Synchronisation in Oscillator Networks}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Time Delays and Network Topology}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Applications in Power Grids}{7}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Summary}{7}{subsection.2.1.4}%
+\contentsline {chapter}{\numberline {3}Theory and Mathematical Framework}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The Kuramoto Model}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Basic Formulation}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Network-Generalised Kuramoto Model}{9}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Kuramoto Model with Time Delay}{9}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Order Parameter}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Critical Coupling}{10}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Methodology}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Simulation Framework}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Numerical Integration}{11}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Implementation Details}{11}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}System Parameters}{12}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Default Configuration}{12}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Frequency Distribution}{12}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Initial Conditions}{12}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Network Topologies}{13}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}All-to-All (Full) Network}{13}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Ring (Nearest-Neighbour) Network}{13}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Star (Hub-and-Spoke) Network}{13}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Random (Erdős-Rényi) Network}{14}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Performance Metrics}{14}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Order Parameter}{14}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Time to Synchronisation}{14}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Phase Variance}{14}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Convergence Rate}{14}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Experimental Design}{15}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Experiment 1: Coupling Strength Dependence}{15}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Experiment 2: Network Size Scaling}{15}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Experiment 3: Network Topology Comparison}{16}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Experiment 4: Time Delay Effects}{16}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Experiment 5: Critical Coupling Threshold}{16}{subsection.4.5.5}%
+\contentsline {chapter}{\numberline {5}Results}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Key Findings}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Experiment 1: Effect of Coupling Strength}{18}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Overview}{18}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Synchronization Time vs. Coupling}{19}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Order Parameter Dynamics}{19}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Phase Variance and Convergence}{20}{subsection.5.2.4}%
+\contentsline {chapter}{\numberline {A}Code Repository and Implementation}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Repository Access}{21}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Key Implementation Highlights}{21}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Kuramoto Model Dynamics}{22}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Time Delay Integration}{22}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Network Topology Generation}{22}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.3}Performance Metrics}{22}{section.A.3}%

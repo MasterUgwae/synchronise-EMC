@@ -5,33 +5,36 @@ import network
 from time import time_ns
 
 # ---------- physical parameters ----------
-N          = 10          # number of oscillators
-K          = 6         # default coupling
-x0         = 50          # centre of the Cauchy distribution (mean frequency)
-scale      = 1.0         # Cauchy scale parameter gamma
+N = 10  # number of oscillators
+K = 3  # default coupling
+x0 = 50  # centre of the Cauchy distribution (mean frequency)
+scale = 1.0  # Cauchy scale parameter gamma
 
 # ---------- reproducibility ----------
-# seed       = 43
-rng        = np.random.default_rng(time_ns())
+rng = np.random.default_rng(time_ns())
 
-# deterministic "random" frequencies and phases
-omega      = cauchy.rvs(loc=x0, scale=scale, size=N, random_state=rng)
-omega      = np.array([50]*N)
-theta0     = np.linspace(0, 2*np.pi, N, endpoint=False)  
-theta0[1] += 0.1  
+# Natural frequencies drawn from Cauchy distribution
+# FIXED: Removed the line that overrode these with constant frequencies
+omega = cauchy.rvs(loc=x0, scale=scale, size=N, random_state=rng)
+
+# Initial phases - slightly perturbed from uniform distribution
+theta0 = np.linspace(0, 2 * np.pi, N, endpoint=False)
+theta0[1] += 0.1
+
 # ---------- integration settings ----------
-t0         = 0.0
-t_final    = 10.0
-dt         = 0.001
-t_eval     = np.arange(t0, t_final + dt, dt)
-t_delay    = 0
+t0 = 0.0
+t_final = 10.0
+dt = 0.001
+t_eval = np.arange(t0, t_final + dt, dt)
+t_delay = 0
 
 # ---------- network choice ----------------
 # choices: "full", "ring", "star", "random_er"
-network_type   = "full"
-network_params = {"p": 0.3}   # only used if network_type=="random_er"
+network_type = "full"
+network_params = {"p": 0.3}  # only used if network_type=="random_er"
 
-def get_adjacency(vary=False,Nloc = N):
+
+def get_adjacency(vary=False, Nloc=N):
     """
     Returns an N×N adjacency matrix based on network_type.
     If vary=True and the network is random_er, it will re-draw edges each call.
@@ -44,13 +47,16 @@ def get_adjacency(vary=False,Nloc = N):
     if kind == "star":
         return network.star(Nloc)
     if kind == "random_er":
-        return network.random_er(Nloc, network_params.get("p", 0.5),
-                                 rng if not vary else None)
+        return network.random_er(
+            Nloc, network_params.get("p", 0.5), rng if not vary else None
+        )
     raise ValueError(f"Unknown network_type: {kind}")
 
-def draw_omega(rng=None):
+
+def draw_omega(rng=None, size=N):
     """
     Return a fresh set of natural frequencies from the same Cauchy law.
     """
-    rng = np.random.default_rng() if rng is None else rng
-    return cauchy.rvs(loc=x0, scale=scale, size=N, random_state=rng)
+    if rng is None:
+        rng = np.random.default_rng()
+    return cauchy.rvs(loc=x0, scale=scale, size=size, random_state=rng)
