@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  7 JAN 2026 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  7 JAN 2026 10:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -277,44 +277,66 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count306
+\lst@gtempboxa=\box54
+\lst@token=\toks25
+\lst@length=\count307
+\lst@currlwidth=\dimen169
+\lst@column=\count308
+\lst@pos=\count309
+\lst@lostspace=\dimen170
+\lst@width=\dimen171
+\lst@newlines=\count310
+\lst@lineno=\count311
+\lst@maxwidth=\dimen172
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count312
+\lst@skipnumbers=\count313
+\lst@framebox=\box55
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count314
+\l__pdf_internal_box=\box56
 ) (./emc.aux)
 \openout1 = `emc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen169
-\scratchbox=\box55
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen170
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count315
+\scratchdimen=\dimen173
+\scratchbox=\box57
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen174
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -323,17 +345,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 17.
  (./emc.out) (./emc.out)
 \@outlinefile=\write3
 \openout3 = `emc.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+\c@lstlisting=\count321
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -342,12 +366,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 \end{abstract}
+l.25 \end{abstract}
                     [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \tableofcontents
+l.33 \tableofcontents
                       [1
 
 ] (./emc.toc [2
@@ -363,21 +387,21 @@ Chapter 1.
 ] [5]
 Chapter 2.
 
-LaTeX Warning: Citation `nature2024sync' on page 6 undefined on input line 78.
+LaTeX Warning: Citation `nature2024sync' on page 6 undefined on input line 79.
 
 
-LaTeX Warning: Citation `ieee2022timedelays' on page 6 undefined on input line 81.
+LaTeX Warning: Citation `ieee2022timedelays' on page 6 undefined on input line 82.
 
 
-LaTeX Warning: Citation `mozafari2013distributed' on page 6 undefined on input line 81.
+LaTeX Warning: Citation `mozafari2013distributed' on page 6 undefined on input line 82.
 
 
-LaTeX Warning: Citation `dorfler2012smartgrids' on page 6 undefined on input line 84.
+LaTeX Warning: Citation `dorfler2012smartgrids' on page 6 undefined on input line 85.
 
 [6
 
 ]
-Overfull \hbox (2.22292pt too wide) in paragraph at lines 87--88
+Overfull \hbox (2.22292pt too wide) in paragraph at lines 88--89
 \OT1/cmr/m/n/10 Key fac-tors in-flu-enc-ing syn-chro-ni-sa-tion in-clude cou-pling strength, net-work topol-
  []
 
@@ -394,535 +418,52 @@ Chapter 5.
 [18
 
 ]
-<../exp1_coupling_vs_time.png, id=423, 867.24pt x 722.7pt>
+<../exp1_coupling_vs_time.png, id=418, 867.24pt x 722.7pt>
 File: ../exp1_coupling_vs_time.png Graphic file (type png)
 <use ../exp1_coupling_vs_time.png>
-Package pdftex.def Info: ../exp1_coupling_vs_time.png  used on input line 455.
+Package pdftex.def Info: ../exp1_coupling_vs_time.png  used on input line 456.
 (pdftex.def)             Requested size: 258.75pt x 215.6207pt.
  [19 <../exp1_coupling_vs_time.png>] [20]
 Appendix A.
 
-Overfull \hbox (6.11166pt too wide) in paragraph at lines 512--513
+Overfull \hbox (6.11166pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 The core dy-nam-ics are im-ple-mented us-ing the degree-normalized cou-pling scheme: 
  []
 
-
-./emc.tex:514: LaTeX Error: Environment lstlisting undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.514 \begin{lstlisting}
-                        [language=Python, caption={Core Kuramoto dynamics im...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./emc.tex:515: Missing $ inserted.
-<inserted text> 
-                $
-l.515 def _
-           kuramoto_rhs(theta, omega, K, A):
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:518: Missing $ inserted.
-<inserted text> 
-                $
-l.518 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (110.27145pt too wide) in paragraph at lines 514--518
-[]\OML/cmm/m/it/10 uramoto[]hs\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta; omega; K; A\OT1/cmr/m/n/10 ) : """\OML/cmm/m/it/10 Computedtheta=dtforthenetwork \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 generalizedKuramotomodel:$ 
- []
-
-[21
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 515.
+ [21
 
 ]
-./emc.tex:528: You can't use `macro parameter character #' in horizontal mode.
-l.528     #
-            Compute all pairwise phase differences
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:529: You can't use `macro parameter character #' in horizontal mode.
-l.529 ...diff = theta[None, :] - theta[:, None]  #
-                                                   shape (N, N)
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:530: Missing $ inserted.
-<inserted text> 
-                $
-l.530     sin_
-              diff = np.sin(diff)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:531: Missing $ inserted.
-<inserted text> 
-                $
-l.531 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:532: You can't use `macro parameter character #' in vertical mode.
-l.532     #
-            Weighted sum over neighbors
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:533: Missing $ inserted.
-<inserted text> 
-                $
-l.533     interaction = np.sum(A * sin_
-                                       diff, axis=1)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:534: Missing $ inserted.
-<inserted text> 
-                $
-l.534 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:535: You can't use `macro parameter character #' in vertical mode.
-l.535     #
-            Degree normalization
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-Overfull \hbox (14.3618pt too wide) in paragraph at lines 535--541
-[]\OT1/cmr/m/n/10 Degree nor-mal-iza-tion de-gree = A.sum(axis=1) with np.errstate(divide='ignore',
+Overfull \hbox (45.00397pt too wide) in paragraph at lines 518--520
+[][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-./emc.tex:543: LaTeX Error: \begin{document} ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.543 \end{lstlisting}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./emc.tex:549: LaTeX Error: Environment lstlisting undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.549 \begin{lstlisting}
-                        [language=Python, caption={Delay-coupled integration}]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./emc.tex:550: Missing $ inserted.
-<inserted text> 
-                $
-l.550 def _
-           euler_delay(theta0, omega, K, A, t_eval, t_delay):
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:553: Missing $ inserted.
-<inserted text> 
-                $
-l.553 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (129.73302pt too wide) in paragraph at lines 549--553
-[]\OT1/cmr/m/n/10 [language=Python, caption=Delay-coupled in-te-gra-tion] def $[]\OML/cmm/m/it/10 uler[]elay\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; omega; K; A; t[]val; t[]elay\OT1/cmr/m/n/10 ) :
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 530--531
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-./emc.tex:556: Missing $ inserted.
-<inserted text> 
-                $
-l.556     dt = t_
-                 eval[1] - t_eval[0]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:560: Missing $ inserted.
-<inserted text> 
-                $
-l.560 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:561: You can't use `macro parameter character #' in vertical mode.
-l.561     #
-            Delay in number of time steps
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:562: Missing $ inserted.
-<inserted text> 
-                $
-l.562     L = int(round(t_
-                          delay / dt))
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:563: Missing $ inserted.
-<inserted text> 
-                $
-l.563 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:565: You can't use `macro parameter character #' in horizontal mode.
-l.565         #
-                Access delayed state
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:567: Missing $ inserted.
-<inserted text> 
-                $
-l.567             theta_
-                        delay = theta[k - L]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:569: You can't use `macro parameter character #' in math mode.
-l.569             theta_delay = theta0  #
-                                          prehistory
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:570: Missing $ inserted.
-<inserted text> 
-                $
-l.570 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:571: You can't use `macro parameter character #' in vertical mode.
-l.571         #
-                Compute RHS with delay
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:572: Missing $ inserted.
-<inserted text> 
-                $
-l.572         dtheta = _
-                        kuramoto_rhs_delay(
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:576: Missing $ inserted.
-<inserted text> 
-                $
-l.576 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (110.53021pt too wide) in paragraph at lines 571--576
-[]\OT1/cmr/m/n/10 Compute RHS with de-lay dtheta = $[]\OML/cmm/m/it/10 uramoto[]hs[]elay\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1]\OML/cmm/m/it/10 ; theta[]elay; omega; K; A\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 theta\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ] =
- []
-
-
-./emc.tex:578: LaTeX Error: \begin{document} ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.578 \end{lstlisting}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./emc.tex:584: LaTeX Error: Environment lstlisting undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.584 \begin{lstlisting}
-                        [language=Python, caption={Network topology implemen...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./emc.tex:588: Missing $ inserted.
-<inserted text> 
-                $
-l.588     np.fill_
-                  diagonal(A, 0.0)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:590: Missing $ inserted.
-<inserted text> 
-                $
-l.590 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (45.82768pt too wide) in paragraph at lines 584--590
-\OT1/cmr/m/n/10 """All-to-all net-work.""" A = np.ones((N, N), dtype=float) np.fill$[]\OML/cmm/m/it/10 iagonal\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0)\OML/cmm/m/it/10 returnA$ 
- []
-
-
-Overfull \hbox (7.74959pt too wide) in paragraph at lines 599--605
-[]\OT1/cmr/m/n/10 def star(N): """Hub-and-spoke net-work.""" A = np.zeros((N, N), dtype=float)
- []
-
-./emc.tex:606: Missing $ inserted.
-<inserted text> 
-                $
-l.606 def random_
-                 er(N, p, rng=None):
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:612: You can't use `macro parameter character #' in math mode.
-l.612     return A + A.T  #
-                            symmetrize
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-./emc.tex:613: LaTeX Error: \begin{document} ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.613 \end{lstlisting}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./emc.tex:613: Missing $ inserted.
-<inserted text> 
-                $
-l.613 \end{lstlisting}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (50.70741pt too wide) in paragraph at lines 606--614
-[]\OT1/cmr/m/n/10 def random$[]\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; p; rng \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 None\OT1/cmr/m/n/10 ) : """\OML/cmm/m/it/10 Erdos \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Renyirandomnetwork:\OT1/cmr/m/n/10 """\OML/cmm/m/it/10 ifrngisNone \OT1/cmr/m/n/10 :
- []
-
-
-./emc.tex:619: LaTeX Error: Environment lstlisting undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 \begin{lstlisting}
-                        [language=Python, caption={Metric calculation}]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./emc.tex:620: Missing $ inserted.
-<inserted text> 
-                $
-l.620 def compute_
-                  metrics(t, theta, r, threshold=0.9):
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:623: Missing $ inserted.
-<inserted text> 
-                $
-l.623 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (65.94005pt too wide) in paragraph at lines 619--623
-[]\OT1/cmr/m/n/10 [language=Python, cap-tion=Metric cal-cu-la-tion] def compute$[]\OML/cmm/m/it/10 etrics\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; theta; r; threshold \OT1/cmr/m/n/10 =
- []
-
-[22]
-./emc.tex:625: Missing $ inserted.
-<inserted text> 
-                $
-l.625         - t_
-                  sync: time to reach r >= threshold
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:630: Missing $ inserted.
-<inserted text> 
-                $
-l.630 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (9.53197pt too wide) in paragraph at lines 624--630
-\OML/cmm/m/it/10 circularvarianceatt[]inal \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 convergence[]ate \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 exponentialdecayrate\OT1/cmr/m/n/10 """\OML/cmm/m/it/10 metrics \OT1/cmr/m/n/10 =
- []
-
-./emc.tex:631: You can't use `macro parameter character #' in vertical mode.
-l.631     #
-            Time to synchronization
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:632: Missing $ inserted.
-<inserted text> 
-                $
-l.632     sync_
-               indices = np.where(r >= threshold)[0]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:636: Missing $ inserted.
-<inserted text> 
-                $
-l.636 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (48.29182pt too wide) in paragraph at lines 631--636
-[]\OT1/cmr/m/n/10 Time to syn-chro-niza-tion sync$[]\OML/cmm/m/it/10 ndices \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 np:where\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r >\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 threshold\OT1/cmr/m/n/10 )[0]\OML/cmm/m/it/10 metrics\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 t[]ync[]\OT1/cmr/m/n/10 ] =
- []
-
-./emc.tex:637: You can't use `macro parameter character #' in vertical mode.
-l.637     #
-            Circular phase variance
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:638: Missing $ inserted.
-<inserted text> 
-                $
-l.638     final_
-                phases = theta[-1, :]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:642: Missing $ inserted.
-<inserted text> 
-                $
-l.642 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (3.02925pt too wide) in paragraph at lines 637--642
-[]\OT1/cmr/m/n/10 Circular phase vari-ance final$[]\OML/cmm/m/it/10 hases \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 theta\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 :]\OML/cmm/m/it/10 metrics\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 phase[]ariance[]\OT1/cmr/m/n/10 ] =
- []
-
-./emc.tex:643: You can't use `macro parameter character #' in vertical mode.
-l.643     #
-            Exponential convergence rate
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:644: You can't use `macro parameter character #' in horizontal mode.
-l.644     #
-            Fit log(1-r) vs t in second half
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./emc.tex:653: Missing $ inserted.
-<inserted text> 
-                $
-l.653             metrics['convergence_
-                                       rate'] = -coeffs[0]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./emc.tex:654: Missing $ inserted.
-<inserted text> 
-                $
-l.654 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (25.88991pt too wide) in paragraph at lines 643--654
-\OT1/cmr/m/n/10 0.001 if np.any(valid): co-effs = np.polyfit(t[midpoint:][valid], np.log(remainder[valid]),
- []
-
-
-./emc.tex:656: LaTeX Error: \begin{document} ended by \end{lstlisting}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.656 \end{lstlisting}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 539.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 539.
+ [22] [23]
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 626.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 630.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 630.
+ [24]
 No file emc.bbl.
-[23] (./emc.aux)
+[25] (./emc.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -931,43 +472,22 @@ L3 programming layer <2024-01-22>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `emc.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `emc.out':
-(rerunfilecheck)             Before: AC0FE851D996AEBC000F7340165DC6DA;10173
-(rerunfilecheck)             After:  C4A7A1422F5CA43D84B70947C163A6EF;10014.
+Package rerunfilecheck Info: File `emc.out' has not changed.
+(rerunfilecheck)             Checksum: C4A7A1422F5CA43D84B70947C163A6EF;10014.
  ) 
 Here is how much of TeX's memory you used:
- 11634 strings out of 474222
- 181237 string characters out of 5748734
- 1934975 words of memory out of 5000000
- 33639 multiletter control sequences out of 15000+600000
- 568612 words of font info for 76 fonts, out of 8000000 for 9000
+ 13637 strings out of 474222
+ 207908 string characters out of 5748734
+ 1972975 words of memory out of 5000000
+ 35501 multiletter control sequences out of 15000+600000
+ 568989 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,628b,514s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.A.4} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.A.3.3} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.A.3.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.A.3.1} has been referenced but does not exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on emc.pdf (25 pages, 619878 bytes).
+ 75i,10n,79p,628b,1965s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on emc.pdf (27 pages, 635145 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 118 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 705 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

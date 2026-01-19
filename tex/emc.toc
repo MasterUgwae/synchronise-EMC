@@ -52,5 +52,5 @@
 \contentsline {section}{\numberline {A.2}Key Implementation Highlights}{21}{section.A.2}%
 \contentsline {subsection}{\numberline {A.2.1}Kuramoto Model Dynamics}{22}{subsection.A.2.1}%
 \contentsline {subsection}{\numberline {A.2.2}Time Delay Integration}{22}{subsection.A.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Network Topology Generation}{22}{subsection.A.2.3}%
-\contentsline {section}{\numberline {A.3}Performance Metrics}{22}{section.A.3}%
+\contentsline {subsection}{\numberline {A.2.3}Network Topology Generation}{23}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.3}Performance Metrics}{24}{section.A.3}%
